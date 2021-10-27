@@ -4,10 +4,10 @@ Pod::Spec.new do |spec|
   spec.version          = '3.5.7'
   spec.summary          = 'TencentOpenAPI for cocoapods'
 
-  spec.homepage         = 'https://code.aliyun.com/'
+  spec.homepage         = 'https://github.com/lengzz'
   spec.license          =   { :type => 'MIT', :file => 'LICENSE' }
   spec.author           = { 'zhuangzhi.leng' => 'leng_zhuangzhi@163.com' }
-  spec.source           = { :git => 'https://code.aliyun.com/modules_ios/TencentOpenAPI_HG.git', :tag => spec.version.to_s }
+  spec.source           = { :git => 'https://github.com/lengzz/TencentOpenAPI_HG.git', :tag => spec.version.to_s }
   
   spec.platform = :ios
   spec.ios.deployment_target = '7.0'
