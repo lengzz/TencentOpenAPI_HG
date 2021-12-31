@@ -11,6 +11,8 @@
 
 typedef void (^sendResultBlock)(NSDictionary *result);
 
+typedef void(^QQApiInterfaceSendMessageResultBlock)(QQApiSendResultCode sendResultCode, NSString *message);
+
 /**
  \brief 处理来至QQ的请求及响应的回调协议
  */
@@ -105,16 +107,27 @@ typedef void (^sendResultBlock)(NSDictionary *result);
 /**
  向手Q发起创建QQ频道的请求
  \param req 请求的内容
- \return 请求发送结果码
+ \param resultBlock 回调发送结果
+ \return void
  */
-+ (QQApiSendResultCode)sendMessageToCreateQQGroupProWithReq:(QQBaseReq*)req;
++ (void)sendMessageToCreateQQGroupProWithMessageRequest:(SendMessageToQQReq *)messageRequest sendResultBlock:(QQApiInterfaceSendMessageResultBlock)sendResultBlock;
+
 
 /**
  向手Q发起加入QQ频道的请求
  \param req 请求的内容
- \return 请求发送结果码 
+ \param resultBlock 回调发送结果
+ \return void
  */
-+ (QQApiSendResultCode)sendMessageToJoinQQGroupProWithReq:(QQBaseReq*)req;
++ (void)sendMessageToJoinQQGroupProWithMessageRequest:(SendMessageToQQReq *)messageRequest sendResultBlock:(QQApiInterfaceSendMessageResultBlock)sendResultBlock;
+
+
+/**
+ 向手Q发起查询QQ频道openID的请求
+ \param req 请求的内容
+ \param resultBlock 请求回调
+ */
++ (void)sendQueryQQGroupProInfo:(QQBaseReq *)req resultBlock:(sendResultBlock)resultBlock;
 
 /**
  向手Q发起组图分享到表情收藏

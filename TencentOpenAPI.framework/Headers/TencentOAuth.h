@@ -194,7 +194,7 @@ typedef NS_ENUM(NSUInteger, TencentAuthMode) {
 /**
  * 设置用户是否已经授权同意授权隐私协议，在主体应用中，用户同意授权隐私协议后再初始化互联SDK，默认未同意授权
  * 注意：如未同意授权隐私协议，则互联SDK的所有功能都无法使用，包括初始化！！！
- * 从3.5.8版本开始支持该方法
+ * 从3.5.7版本开始支持该方法
  *
  * @param isAgreedAuthorization 是否已经授权，isAgreedAuthorization=YES, 表示已经同意授权；isAgreedAuthorization=NO，表示未同意授权，互联SDK的所有功能都无法使用
  */
@@ -202,6 +202,7 @@ typedef NS_ENUM(NSUInteger, TencentAuthMode) {
 
 /**
  * 获取当前用户是否已经同意授权隐私协议
+ * 从3.5.7版本开始支持该方法
  */
 + (BOOL)isUserAgreedAuthorization;
 
