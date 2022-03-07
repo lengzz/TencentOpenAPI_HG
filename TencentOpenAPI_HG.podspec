@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |spec|
   spec.name             = 'TencentOpenAPI_HG'
-  spec.version          = '3.5.9'
+  spec.version          = '3.5.11'
   spec.summary          = 'TencentOpenAPI for cocoapods'
 
   spec.homepage         = 'https://github.com/lengzz'

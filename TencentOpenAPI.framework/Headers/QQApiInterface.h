@@ -11,6 +11,7 @@
 
 typedef void (^sendResultBlock)(NSDictionary *result);
 
+// 发送消息回调是否发送成功
 typedef void(^QQApiInterfaceSendMessageResultBlock)(QQApiSendResultCode sendResultCode, NSString *message);
 
 /**
@@ -226,6 +227,6 @@ typedef void(^QQApiInterfaceSendMessageResultBlock)(QQApiSendResultCode sendResu
 + (void)setSwitchPrintLogToFile:(BOOL)on;
 
 ///日志文件目录
-+ (NSString*)getLogFilePath;
++ (NSString *)getLogFilePath;
 
 @end

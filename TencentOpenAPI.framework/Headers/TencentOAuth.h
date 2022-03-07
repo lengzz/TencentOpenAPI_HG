@@ -54,7 +54,7 @@ typedef NS_ENUM(NSUInteger, TencentAuthMode) {
 @property(nonatomic, copy) NSDate *expirationDate;
 
 /** 已实现的开放接口的回调委托对象 */
-@property(nonatomic, assign) id<TencentSessionDelegate> sessionDelegate;
+@property(nonatomic, weak) id<TencentSessionDelegate> sessionDelegate;
 
 /** 第三方应用在开发过程中设置的URLSchema，用于浏览器登录后后跳到第三方应用 */
 @property(nonatomic, copy) NSString *localAppId;
@@ -88,6 +88,7 @@ typedef NS_ENUM(NSUInteger, TencentAuthMode) {
 
 /** 第三方在授权登录/分享 时选择 QQ，还是TIM 。在授权前一定要指定其中一个类型*/
 @property(nonatomic, assign) TencentAuthShareType authShareType;
+
 /**
  * 获取上次登录得到的token
  *
